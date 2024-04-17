@@ -1,8 +1,5 @@
-import json
-
-import requests
-
-import requests
+TELE_TOKEN = '6750483589:AAGTmsJz5wD9gSiDrQO05rsovOC-BVojluc'
+chatId = '927795027'
 
 cookies = {
     '__lhash_': 'de9054329c3cb9251f7b8a32777d19f9',
@@ -105,8 +102,3 @@ params = {
     'addBonusRubles': 'true',
 }
 
-response = requests.get('https://www.mvideo.ru/bff/products/prices', params=params, cookies=cookies, headers=headers).json()
-
-print(response['body']['materialPrices'][0]['bonusRubles']['total'])
-print(response['body']['materialPrices'][0]['price']['basePrice'])
-print(response['body']['materialPrices'][0]['price']['salePrice'])
