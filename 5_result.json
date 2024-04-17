@@ -1,0 +1,176 @@
+[
+    {
+        "productId": "400095286",
+        "name": "Монитор игровой Thunderobot 34\" VA черный KQ34C144C",
+        "nameTranslit": "monitor-igrovoi-thunderobot-34-va-chernyi-kq34c144c",
+        "productType": "DIG",
+        "usedProductType": null,
+        "materialCisNumber": "400095286",
+        "materialSource": "ERP",
+        "modelName": "KQ34C144C",
+        "rating": {
+            "star": 4.902439024390244,
+            "count": 41,
+            "percent": 91
+        },
+        "supplier": null,
+        "vendorCatalog": null,
+        "sublicense": false,
+        "partnerType": null,
+        "saleLegal": true,
+        "preorder": null,
+        "isMprimeSubscription": false,
+        "isPreorder": false,
+        "image": "Pdb/small_pic/480/400095286b.jpg",
+        "brandId": "10280",
+        "brandName": "Thunderobot",
+        "status": {
+            "showCase": false,
+            "availableOnlyInRetailStore": false,
+            "soldOut": false,
+            "isCannotBeExchanged": false
+        },
+        "category": {
+            "id": "3587",
+            "name": "Игровые мониторы"
+        },
+        "properties": null,
+        "propertiesPortion": [
+            {
+                "id": 5552,
+                "name": "Гарантия",
+                "value": "1 год",
+                "nameDescription": null,
+                "valueDescription": null,
+                "priority": 1,
+                "measure": null
+            },
+            {
+                "id": 108,
+                "name": "Диагональ экрана",
+                "value": "34\"(86.3 см)",
+                "nameDescription": null,
+                "valueDescription": null,
+                "priority": 2,
+                "measure": null
+            },
+            {
+                "id": 617308,
+                "name": "Экран",
+                "value": "34\"/3440x1440 Пикс",
+                "nameDescription": null,
+                "valueDescription": null,
+                "priority": 3,
+                "measure": null
+            },
+            {
+                "id": 2055,
+                "name": "Яркость",
+                "value": "430",
+                "nameDescription": null,
+                "valueDescription": null,
+                "priority": 5,
+                "measure": "кд/кв.м"
+            },
+            {
+                "id": 2119,
+                "name": "Частота обновления",
+                "value": "165",
+                "nameDescription": "Частота смены кадров на экране. Влияет на качество изображения, особенно в динамичных сценах и играх.",
+                "valueDescription": null,
+                "priority": 7,
+                "measure": "Гц"
+            }
+        ],
+        "item_basePrice": 39999,
+        "item_salePrice": 39999,
+        "item_bonus": 1200
+    },
+    {
+        "productId": "400095356",
+        "name": "Монитор игровой Thunderobot 31.5\" VA черный Q32HL",
+        "nameTranslit": "monitor-igrovoi-thunderobot-315-va-chernyi-q32hl",
+        "productType": "DIG",
+        "usedProductType": null,
+        "materialCisNumber": "400095356",
+        "materialSource": "ERP",
+        "modelName": "Q32HL",
+        "rating": {
+            "star": 5,
+            "count": 14,
+            "percent": 101
+        },
+        "supplier": null,
+        "vendorCatalog": null,
+        "sublicense": false,
+        "partnerType": null,
+        "saleLegal": true,
+        "preorder": null,
+        "isMprimeSubscription": false,
+        "isPreorder": false,
+        "image": "Pdb/small_pic/480/400095356b.jpg",
+        "brandId": "10280",
+        "brandName": "Thunderobot",
+        "status": {
+            "showCase": false,
+            "availableOnlyInRetailStore": false,
+            "soldOut": false,
+            "isCannotBeExchanged": false
+        },
+        "category": {
+            "id": "3587",
+            "name": "Игровые мониторы"
+        },
+        "properties": null,
+        "propertiesPortion": [
+            {
+                "id": 5552,
+                "name": "Гарантия",
+                "value": "1 год",
+                "nameDescription": null,
+                "valueDescription": null,
+                "priority": 1,
+                "measure": null
+            },
+            {
+                "id": 108,
+                "name": "Диагональ экрана",
+                "value": "31.5\"(80.1 см)",
+                "nameDescription": null,
+                "valueDescription": null,
+                "priority": 2,
+                "measure": null
+            },
+            {
+                "id": 617308,
+                "name": "Экран",
+                "value": "31.5\"/2560x1440 Пикс",
+                "nameDescription": null,
+                "valueDescription": null,
+                "priority": 3,
+                "measure": null
+            },
+            {
+                "id": 2055,
+                "name": "Яркость",
+                "value": "280",
+                "nameDescription": null,
+                "valueDescription": null,
+                "priority": 5,
+                "measure": "кд/кв.м"
+            },
+            {
+                "id": 2119,
+                "name": "Частота обновления",
+                "value": "165",
+                "nameDescription": "Частота смены кадров на экране. Влияет на качество изображения, особенно в динамичных сценах и играх.",
+                "valueDescription": null,
+                "priority": 7,
+                "measure": "Гц"
+            }
+        ],
+        "item_basePrice": 34999,
+        "item_salePrice": 34999,
+        "item_bonus": 1050
+    }
+]
