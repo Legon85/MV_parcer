@@ -1,9 +1,6 @@
-import json
+# import json
 import requests
-from bs4 import BeautifulSoup
-import codecs
 
-import requests
 
 cookies = {
     '__lhash_': 'de9054329c3cb9251f7b8a32777d19f9',

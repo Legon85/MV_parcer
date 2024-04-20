@@ -1,6 +1,13 @@
 TELE_TOKEN = '6750483589:AAGTmsJz5wD9gSiDrQO05rsovOC-BVojluc'
 chatId = '927795027'
 
+# Скрипт запроса chat_id телеграм бота:
+# TOKEN = TELE_TOKEN
+# url = f"https://api.telegram.org/bot{TOKEN}/getUpdates"
+# print(requests.get(url).json())
+
+
+
 cookies = {
     '__lhash_': 'de9054329c3cb9251f7b8a32777d19f9',
     'MVID_AB_PERSONAL_RECOMMENDS': 'true',
@@ -102,3 +109,8 @@ params = {
     'addBonusRubles': 'true',
 }
 
+params2 = {
+    'productIds': '10031890',
+    'isPromoApplied': 'true',
+    'addBonusRubles': 'true',
+}

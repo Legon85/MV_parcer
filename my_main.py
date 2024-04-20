@@ -1,37 +1,53 @@
 import json
-from notifiers import get_notifier
-import time
-import telegram_send
 import requests
+import time
 from config import cookies, headers, params, TELE_TOKEN, chatId
 
 
+def send_message(message):
+    url = f"https://api.telegram.org/bot{TELE_TOKEN}/sendMessage?chat_id={chatId}&text={message}"
+    requests.get(url).json()
+
+
 def get_prices():
-    response = requests.get('https://www.mvideo.ru/bff/products/prices', params=params, cookies=cookies,
-                            headers=headers).json()
+    last_base_price = None
+    last_sale_price = None
+    last_bonus_rubles = None
 
-    bonusRubles = response['body']['materialPrices'][0]['bonusRubles']['total']
-    basePrice = response['body']['materialPrices'][0]['price']['basePrice']
-    salePrice = response['body']['materialPrices'][0]['price']['salePrice']
-
-    print(f"базовая цена: {basePrice}")
-    print(f"цена со скидкой: {salePrice}")
-    print(f"бонусы: {bonusRubles}")
-
-
-def notif():
     while True:
-        what = input('О чём напомнить?\nДля выхода отправьте \'exit\'')
-        if what == 'exit':
-            break
-        else:
-            t = input("через сколько минут напомнить?\n")
-            t = int(t) * 60
-            time.sleep(t)
+        # response = requests.get('https://www.mvideo.ru/bff/products/prices', params=params, cookies=cookies,
+        #                         headers=headers).json()
+        with open('Thanderobot.json') as file:
+            response = json.load(file)
 
-            telegram = get_notifier('telegram')
-            telegram.notify(token=TELE_TOKEN, chat_id=chatId, message=what)
+        # with open('Thanderobot.json', 'w', encoding='utf-8') as f:
+        #     json.dump(response, f, indent=4, ensure_ascii=False)
+
+        current_bonus_rubles = response['body']['materialPrices'][0]['bonusRubles']['total']
+        current_base_price = response['body']['materialPrices'][0]['price']['basePrice']
+        current_sale_price = response['body']['materialPrices'][0]['price']['salePrice']
+
+        if last_sale_price != current_sale_price:
+            message = (f'Цены изменились\nСтарые цены:\n базовая цена: {last_base_price},цена со скидкой:'
+                       f' {last_sale_price}, '
+                       f'бонусы: {last_bonus_rubles} \nТекущие цены:\n базовая цена: {current_base_price}, '
+                       f'цена со скидкой: '
+                       f'{current_sale_price}, бонусы: {current_bonus_rubles}')
+
+            send_message(message)
+
+            last_sale_price = current_sale_price
+            last_bonus_rubles = current_bonus_rubles
+            last_base_price = current_base_price
+
+        else:
+            message2 = (f'Цены не изменились\nТекущие цены:\n  базовая цена: {current_base_price}, цена со скидкой'
+                        f':{current_sale_price}, '
+                        f'бонусы: {current_bonus_rubles}')
+            send_message(message2)
+
+        time.sleep(7)
+
 
 # if __name__ == '__main__':
-    # tele_send()
-    # get_prices()
+get_prices()
